@@ -1,7 +1,7 @@
 close all
 clear all
 
-filename=['/home/valery/Dev/Data/out_reco.h5'];
+filename=['/home/valery/Dev/stage/out_reco.h5'];
 hinfo = hdf5info(filename);
 
 tempo=single(h5read(filename, hinfo.GroupHierarchy.Groups(1).Groups(1).Datasets(2).Name));

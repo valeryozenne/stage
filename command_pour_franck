@@ -1,0 +1,25 @@
+#!/bin/bash
+
+home=$(pwd)
+
+rm -f out_reco.h5
+
+#brain Grappa MB
+#DATA=/home/valery/Reseau/Imagerie/DICOM_DATA/2017-11-07_ICM/FIDSMS/meas_MID00662_FID24281_MB2_1_8iso.h5
+#NOISEDATA=/home/valery/Reseau/Imagerie/DICOM_DATA/2017-11-07_ICM/FIDSMS/meas_MID00662_NOISE24281_MB2_1_8iso.h5
+ 
+#gel Grappa SB
+#DATA=/home/valery/Reseau/Imagerie/DICOM_DATA/2017-11-07_ICM/FIDSMS/meas_MID00662_FID24281_MB2_1_8iso.h5
+#NOISEDATA=/home/valery/Reseau/Imagerie/DICOM_DATA/2017-11-07_ICM/FIDSMS/meas_MID00662_NOISE24281_MB2_1_8iso.h5
+
+
+#brain Grappa SB
+
+DATA=/home/valery/Reseau/Imagerie/DICOM_DATA/2017-10-31_SMS_Brain_Aurelien/FID/meas_MID00106_FID51714_cmrr_1_7iso_GP2_MB1_36s.h5
+#NOISEDATA=/home/valery/Reseau/Imagerie/DICOM_DATA/2017-10-31_SMS_Brain_Aurelien/FID/meas_MID00106_NOISE51714_cmrr_1_7iso_GP2_MB1_36s.h5
+
+#CONFIG=default_measurement_dependencies.xml
+#gadgetron_ismrmrd_client -f ${NOISEDATA} -c ${CONFIG} 
+
+CONFIG=Generic_Cartesian_Grappa_EPI.xml
+gadgetron_ismrmrd_client -f ${DATA} -c ${CONFIG} -o out_reco.h5

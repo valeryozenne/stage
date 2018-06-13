@@ -2,17 +2,25 @@ Bonjour
 
 Voici quelques pistes pour démarrer :
 
+# Le Gadgetron
+
 se familiariser avec le Gadgetron
 
+
 https://github.com/gadgetron/gadgetron/wiki/Gadgetron-Hello-World
+
 https://github.com/gadgetron/gadgetron/wiki/Gadgetron-Gadgets
+
 https://github.com/gadgetron/gadgetron/wiki/Gadgetron-Streaming-Architecture
+
 https://github.com/gadgetron/gadgetron/wiki/Linux-Installation
+
 https://github.com/gadgetron/gadgetron/wiki/HDF5-Files
+
 https://github.com/gadgetron/gadgetron/wiki/Gadgetron-Toolboxes
 
 
-## exercice 1
+## Partie 1
 plusieurs jeux de données sont a disposition
 on va travailler sur la reconstruction EPI
 
@@ -24,7 +32,7 @@ gadgetron
 ### 2) à côte le client qui envoie les données au serveur
 
 ```
-cd Dev/Data
+cd Dev/stage
 ./command_pour_franck
 ```
 
@@ -61,10 +69,15 @@ gadgetron_ismrmrd_client -f ${DATA} -c ${CONFIG} -o out_reco.h5
 soit avec hdfview
 
 ouvrir hdfview,
+
 double clic date
+
 double clique image
+
 clic droit data open as,
+
 cliquer sur image
+
 modifier dim3 dim4 dim0  puis ok
 
 soit avec matlab
@@ -73,10 +86,33 @@ avec le script main_read_hdf5
 
 
 
-## exercice 2 création d'un nouveau gadget
+## Partie 2 création d'un nouveau gadget
 https://github.com/gadgetron/gadgetron/wiki/Making-a-New-Gadget-Library
 
-## exercice 3  idem 
-inserer le code 
- 
+## Partie 3  création d'un nouveau gadget
 
+rajouter GenericEmptyGadget.cpp GenericEmptyGadget.h
+
+dans mri_core
+
+
+
+# boost
+
+https://www.boost.org/doc/libs/1_64_0/libs/numeric/ublas/doc/index.html
+
+https://www.boost.org/doc/libs/1_65_1/libs/numeric/ublas/doc/operations_overview.html#blas
+
+
+
+# cuda explication en français
+
+https://tcuvelier.developpez.com/tutoriels/gpgpu/cuda/introduction/?page=theorie
+
+# cuda avec matlab
+
+https://fr.mathworks.com/help/distcomp/run-cuda-or-ptx-code-on-gpu.html#bsic4x4
+
+https://fr.mathworks.com/company/newsletters/articles/prototyping-algorithms-and-testing-cuda-kernels-in-matlab.html
+
+https://fr.mathworks.com/discovery/matlab-gpu.html
